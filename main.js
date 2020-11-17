@@ -50,7 +50,7 @@ const handleMenu = cmd => {
     case '6':
       console.log('Quitting!')
       interface.close();
-      interface.question(menu, handleMenu);
+      // interface.question(menu, handleMenu);
       break;
   }
 };
@@ -60,6 +60,7 @@ const add = adding => {
   for(const toDo of data.todos){
     console.log('* ' + toDo.text);
   }
+  data.todos.push({text: adding}, {inComplete: false}, {priority: 2})
   interface.question(menu, handleMenu)
 }
 
